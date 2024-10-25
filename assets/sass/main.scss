@@ -1,7 +1,5 @@
-@use "bulma/sass" with (
-    $family-primary: '"Public Sans", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",  "Helvetica Neue", "Helvetica", "Arial", sans-serif',
-    $navbar-background-color: none
-);
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500..900&display=swap');
 
 $purple-light: #ab52fd;
 $peachy-pink: #ffb2bf;
@@ -11,9 +9,6 @@ body {
     background-color: var($purple-light);
     background-image: linear-gradient(315deg, $purple-light 8%, $peachy-pink 85%);
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500..900&display=swap');
 
 $hero-font-size: 12vw;
 
