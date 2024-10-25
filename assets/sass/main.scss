@@ -1,0 +1,12 @@
+@use "bulma/sass" with (
+    $navbar-background-color: none
+);
+
+$purple-light: #ab52fd;
+$peachy-pink: #ffb2bf;
+
+body {
+    background-color: var($purple-light);
+    background-image: linear-gradient(315deg, $purple-light 8%, $peachy-pink 85%);
+}
+

@@ -1,0 +1,11 @@
+{
+    "devDependencies": {
+        "bulma": "^1.0.2",
+        "sass": "^1.80.4"
+    },
+    "scripts": {
+        "build-bulma": "sass --load-path=node_modules assets/sass/main.scss static/css/main.css",
+        "watch-bulma": "npm run build-bulma -- --watch", 
+        "build": "npm run build-bulma && hugo"
+    }
+}
