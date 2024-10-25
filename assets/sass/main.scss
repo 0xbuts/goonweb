@@ -6,7 +6,7 @@ $peachy-pink: #ffb2bf;
 $purple-dark: #306;
 
 body {
-    background-color: var($purple-light);
+    background-color: $purple-light;
     background-image: linear-gradient(315deg, $purple-light 8%, $peachy-pink 85%);
 }
 
