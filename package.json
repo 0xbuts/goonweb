@@ -6,6 +6,7 @@
     "scripts": {
         "build-bulma": "sass --no-source-map --load-path=node_modules assets/sass/bulma.scss static/css/bulma.css",
         "watch-bulma": "npm run build-bulma -- --watch", 
-        "build": "npm run build-bulma && hugo"
+        "build": "npm run build-bulma && hugo",
+        "dev": "hugo serve --disableFastRender"
     }
 }
