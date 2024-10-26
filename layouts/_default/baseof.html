@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="/css/bulma.css">
-    
     {{ $opts := dict "transpiler" "libsass" "targetPath" "css/main.css" }}
     {{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
