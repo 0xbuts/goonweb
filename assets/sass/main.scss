@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500..900&display=swap');
+@import "colors";
 
-$purple-light: #ab52fd;
-$peachy-pink: #ffb2bf;
-$purple-dark: #306;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
 
 body {
     background-color: $purple-light;
@@ -21,8 +18,11 @@ $hero-font-size: 12vw;
 }
 
 .navbar-item {
-    color: $purple-dark;
     font-weight: 800;
     font-size: 20px;
+    color: $purple-dark;
 }
 
+.navbar-item:hover {
+    color: white;
+}

@@ -1,4 +1,10 @@
+@use "colors";
 @use "bulma/sass" with (
     $family-primary: '"Public Sans", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",  "Helvetica Neue", "Helvetica", "Arial", sans-serif',
-    $navbar-background-color: none
+    $navbar-background-color: none,
+    $navbar-item-background-l: none,
+    $navbar-item-background-a: none,
+    $link: colors.$purple-dark,
 );
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500..900&display=swap');
