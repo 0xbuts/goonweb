@@ -2,26 +2,25 @@
 @import "colors";
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
 
+$navbar-breakpoint: 1023px;
+
 body {
     background-color: $purple-light;
     background-image: linear-gradient(315deg, $purple-light 8%, $peachy-pink 85%);
 }
 
-$hero-font-size: 10vw;
-
 .hero .title {
     font-family: "Barlow Condensed", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: 800;
     color: $purple-dark;
-    font-size: $hero-font-size;
-    line-height: calc($hero-font-size*0.75);
+    font-size: 10vw;
+    line-height: 7.5vw;
 }
 
-@media (max-width: 1024px) {
-    $hero-font-size: 16vw;
+@media (max-width: $navbar-breakpoint) {
     .hero .title {
-        font-size: $hero-font-size;
-        line-height: calc($hero-font-size*0.75);
+        font-size: 16vw;
+        line-height: 12vw;
     }
 }
 
@@ -40,4 +39,15 @@ $hero-font-size: 10vw;
     height: auto;
     max-height: 4rem;
     margin-left: 1rem;
+}
+
+@media (max-width: $navbar-breakpoint) {
+    .navbar-menu {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        background-color: $peachy-pink;
+    }
 }
