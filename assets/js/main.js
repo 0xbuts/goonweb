@@ -3,6 +3,8 @@ import './icons.js';
 document.addEventListener('DOMContentLoaded', main);
 
 function main() {
+
+    // anchors smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -12,6 +14,16 @@ function main() {
             });
         });
     });
+
+    // copy to clipboard
+    async function copyToClipBoard(text) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch (err) {
+            return false;
+        }
+    }
 
     document.querySelectorAll('.clipboard').forEach(clipboard => {
         const text = clipboard.querySelector('[data-clipboard="text"]');
@@ -26,9 +38,9 @@ function main() {
 
                 const resultClass = success ? 'is-success' : 'is-danger';
                 clipboard.classList.add(resultClass);
-                if(normalContent && successContent && errorContent) {
+                if (normalContent && successContent && errorContent) {
                     normalContent.classList.add(hiddenClass);
-                    if(success) {
+                    if (success) {
                         successContent.classList.remove(hiddenClass);
                     } else {
                         errorContent.classList.remove(hiddenClass);
@@ -39,9 +51,9 @@ function main() {
                     setTimeout(resolve, 1000);
                 });
                 clipboard.classList.remove(resultClass);
-                if(normalContent && successContent && errorContent) {
+                if (normalContent && successContent && errorContent) {
                     normalContent.classList.remove(hiddenClass);
-                    if(success) {
+                    if (success) {
                         successContent.classList.add(hiddenClass);
                     } else {
                         errorContent.classList.add(hiddenClass);
@@ -50,13 +62,32 @@ function main() {
             });
         }
     });
-}
 
-async function copyToClipBoard(text) {
-    try {
-        await navigator.clipboard.writeText(text);
-        return true;
-    } catch (err) {
-        return false;
-    }
+    // navgar burger
+
+    var navbar = document.querySelector('.navbar');
+    var navbarMenu = document.querySelector('.navbar-menu');
+    var navbarBurger = document.querySelector('.navbar-burger');
+
+    const toggleBurger = () => {
+        navbarBurger.classList.toggle('is-active');
+        navbarMenu.classList.toggle('is-active');
+    };
+
+    const navBarLinks = navbar.querySelectorAll('a[href^="#"]');
+    navBarLinks.forEach(function (el) {
+        el.addEventListener('click', toggleBurger);
+    });
+
+    navbarBurger.addEventListener('click', toggleBurger);
+
+    const isVisible = (elem) => { return !!elem && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length); };
+
+    document.addEventListener('click', (event) => {
+        if (!navbarBurger.contains(event.target) && isVisible(navbarBurger) && !navbarMenu.contains(event.target) && isVisible(navbarMenu)) {
+            if (navbarMenu.classList.contains('is-active')) {
+                toggleBurger();
+            }
+        }
+    });
 }
