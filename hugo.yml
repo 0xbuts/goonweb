@@ -4,3 +4,9 @@ title: 'GOON'
 
 build:
   noJSConfigInAssets: true
+
+params:
+  social:
+    twitter: https://x.com/0xGOON_morning
+    telegram: https://t.me/GOON_morning
+    discord: https://discord.gg/ESz7yxuk
