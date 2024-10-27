@@ -26,3 +26,10 @@ $hero-font-size: 12vw;
 .navbar-item:hover {
     color: white;
 }
+
+.navbar .logo img {
+    width: 200px;
+    height: auto;
+    max-height: 4rem;
+    margin-left: 1rem;
+}
