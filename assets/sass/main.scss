@@ -48,6 +48,9 @@ body {
 .navbar-item:hover {
     color: white;
 }
+.navbar-item a:hover {
+    color: white;
+}
 
 @media (max-width: 1440px) {
     .navbar-item {
