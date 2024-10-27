@@ -18,6 +18,63 @@
 </head>
 
 <body>
+    <nav class="navbar pl-4 pr-6" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <figure class="image logo">
+                    <img src="/images/goon_logo.png" alt="GOON logo">
+                </figure>
+            </a>
+    
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                {{ block "navbar-items" . }}
+                {{ end }}
+                <a class="navbar-item" href="/character-classes">
+                    Character Classes
+                </a>
+                <a class="navbar-item" href="/brand-kit">
+                    Brand Kit
+                </a>
+                <a class="navbar-item" href="/partnerships">
+                    Partnerships
+                </a>
+                <a class="navbar-item" href="http://docs.0xgoon.com/" target="_blank">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                        <span>Docs</span>
+                    </span>
+                </a>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item" href="{{ site.Params.social.twitter }}" target="_blank">
+                    <span class="icon is-medium" data-clipboard="normal">
+                        <i class="fab fa-lg fa-x-twitter"></i>
+                    </span>
+                </a>
+                <a class="navbar-item" href="{{ site.Params.social.telegram }}" target="_blank">
+                    <span class="icon is-medium" data-clipboard="normal">
+                        <i class="fab fa-lg fa-telegram"></i>
+                    </span>
+                </a>
+                <a class="navbar-item" href="{{ site.Params.social.discord }}" target="_blank">
+                    <span class="icon is-medium" data-clipboard="normal">
+                        <i class="fab fa-lg fa-discord"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
     {{ block "main" . }}
     {{ end }}
 </body>

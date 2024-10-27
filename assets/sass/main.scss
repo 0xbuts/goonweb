@@ -1,6 +1,5 @@
 @import "/css/bulma.css";
 @import "colors";
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
 
 $navbar-breakpoint: 1023px;
 
@@ -10,11 +9,14 @@ body {
 }
 
 .hero .title {
-    font-family: "Barlow Condensed", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: 800;
-    color: $purple-dark;
     font-size: 10vw;
     line-height: 7.5vw;
+}
+
+.content .title {
+    font-size: 4vw;
+    line-height: 3vw;
+    text-align: center !important;
 }
 
 @media (max-width: $navbar-breakpoint) {
@@ -22,16 +24,11 @@ body {
         font-size: 16vw;
         line-height: 12vw;
     }
-}
 
-.navbar-item {
-    font-weight: 800;
-    font-size: 20px;
-    color: $purple-dark;
-}
-
-.navbar-item:hover {
-    color: white;
+    .content .title {
+        font-size: 8vw;
+        line-height: 6vw;
+    }
 }
 
 .navbar .logo img {
@@ -39,6 +36,33 @@ body {
     height: auto;
     max-height: 4rem;
     margin-left: 1rem;
+}
+
+.navbar-item {
+    font-weight: 800;
+    font-size: 20px;
+    color: $purple-dark;
+    padding: 0.5rem 0.7rem;
+}
+
+.navbar-item:hover {
+    color: white;
+}
+
+@media (max-width: 1440px) {
+    .navbar-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+    .navbar .logo img {
+        width: 100px;
+    }
+
+    .navbar-item {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: $navbar-breakpoint) {

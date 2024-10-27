@@ -1,0 +1,4 @@
+---
+title: Partnerships
+layout: single
+---

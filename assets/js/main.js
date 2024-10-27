@@ -36,10 +36,9 @@ function main() {
                 const success = await copyToClipBoard(text.innerText);
                 const hiddenClass = 'is-hidden';
 
-                const resultClass = success ? 'is-success' : 'is-danger';
-                clipboard.classList.add(resultClass);
                 if (normalContent && successContent && errorContent) {
                     normalContent.classList.add(hiddenClass);
+                    
                     if (success) {
                         successContent.classList.remove(hiddenClass);
                     } else {
@@ -50,7 +49,7 @@ function main() {
                 await new Promise(resolve => {
                     setTimeout(resolve, 1000);
                 });
-                clipboard.classList.remove(resultClass);
+
                 if (normalContent && successContent && errorContent) {
                     normalContent.classList.remove(hiddenClass);
                     if (success) {

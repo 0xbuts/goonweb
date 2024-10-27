@@ -1,69 +1,38 @@
+{{ define "navbar-items" }}
+<a class="navbar-item" href="#about">
+    About
+</a>
+<a class="navbar-item" href="#utilities">
+    Utilities
+</a>
+<a class="navbar-item" href="#how-to-buy">
+    How to buy
+</a>
+<a class="navbar-item" href="#tokenomics">
+    Tokenomics
+</a>
+{{ end }}
 {{ define "main" }}
-<nav class="navbar pl-4 pr-6" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <figure class="image logo">
-                <img src="/images/goon_logo.png" alt="GOON logo">
-            </figure>
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-
-    <div class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="#about">
-                About
-            </a>
-
-            <a class="navbar-item" href="#tokenomics">
-                Tokenomics
-            </a>
-        </div>
-        <div class="navbar-end">
-            <a class="navbar-item" href="{{ site.Params.social.twitter }}" target="_blank">
-                <span class="icon is-medium" data-clipboard="normal">
-                    <i class="fab fa-lg fa-x-twitter"></i>
-                </span>
-            </a>
-            <a class="navbar-item" href="{{ site.Params.social.telegram }}" target="_blank">
-                <span class="icon is-medium" data-clipboard="normal">
-                    <i class="fab fa-lg fa-telegram"></i>
-                </span>
-            </a>
-            <a class="navbar-item" href="{{ site.Params.social.discord }}" target="_blank">
-                <span class="icon is-medium" data-clipboard="normal">
-                    <i class="fab fa-lg fa-discord"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-</nav>
-
 <section class="hero is-fullheight-with-navbar">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <div class="title">
+            <h1 class="title pb-6">
                 <div class="is-italic">1 BILLION</div>
                 <div>OR</div>
                 <div class="is-italic">DEATH</div>
-            </div>
+            </h1>
             <div>
-               
-                <button class="button is-primary clipboard">
-                    <span class="icon" data-clipboard="normal">
-                        <i class="fas fa-clipboard"></i>
-                    </span>
-                    <span class="icon is-hidden" data-clipboard="success">
-                        <i class="fas fa-check"></i>
-                    </span>
-                    <span class="icon is-hidden" data-clipboard="error">
-                        <i class="fas fa-xmark"></i>
+                <button class="button is-primary clipboard is-small">
+                    <span class="icon">
+                        <span data-clipboard="normal">
+                            <i class="fas fa-clipboard"></i>
+                        </span>
+                        <span data-clipboard="success" class="is-hidden has-text-success">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span data-clipboard="error" class="is-hidden has-text-danger">
+                            <i class="fas fa-xmark"></i>
+                        </span>
                     </span>
                     <span data-clipboard="text">
                         0x433cde5a82b5e0658da3543b47a375dffd126eb6
@@ -73,14 +42,8 @@
         </div>
     </div>
 </section>
-<section class="section" id="about">
-    <div class="content">
-        <h2 class="title">About</h2>
-    </div>
-</section>
-<section class="section" id="tokenomics">
-    <div class="content">
-        <h2 class="title">Tokenomics</h2>
-    </div>
-</section>
+{{ partial "about.html" . }}
+{{ partial "utilities.html" . }}
+{{ partial "how-to-buy.html" . }}
+{{ partial "tokenomics.html" . }}
 {{ end }}

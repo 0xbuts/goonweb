@@ -4,12 +4,16 @@
     $navbar-background-color: none,
     $navbar-item-background-l: none,
     $navbar-item-background-a: none,
+    $navbar-padding-horizontal: 1rem,
     $link: colors.$purple-dark,
-    $title-color: colors.$purple-dark,
     $content-heading-color: colors.$purple-dark,
     $primary: colors.$purple-light,
     $navbar-height: 8rem,
-
+    $title-family: '"Barlow Condensed", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",  "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    $title-color: colors.$purple-dark,
+    $title-weight: 800,
+    $success: colors.$success,
 );
 
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;1,800&display=swap');
