@@ -7,7 +7,7 @@ body {
     background-image: linear-gradient(315deg, $purple-light 8%, $peachy-pink 85%);
 }
 
-$hero-font-size: 12vw;
+$hero-font-size: 10vw;
 
 .hero .title {
     font-family: "Barlow Condensed", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -15,6 +15,14 @@ $hero-font-size: 12vw;
     color: $purple-dark;
     font-size: $hero-font-size;
     line-height: calc($hero-font-size*0.75);
+}
+
+@media (max-width: 1024px) {
+    $hero-font-size: 16vw;
+    .hero .title {
+        font-size: $hero-font-size;
+        line-height: calc($hero-font-size*0.75);
+    }
 }
 
 .navbar-item {
