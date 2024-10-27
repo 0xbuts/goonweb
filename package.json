@@ -1,11 +1,15 @@
 {
     "devDependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.6.0",
+        "@fortawesome/free-brands-svg-icons": "^6.6.0",
+        "@fortawesome/free-regular-svg-icons": "^6.6.0",
+        "@fortawesome/free-solid-svg-icons": "^6.6.0",
         "bulma": "^1.0.2",
         "sass": "^1.80.4"
     },
     "scripts": {
         "build-bulma": "sass --no-source-map --load-path=node_modules assets/sass/bulma.scss static/css/bulma.css",
-        "watch-bulma": "npm run build-bulma -- --watch", 
+        "watch-bulma": "npm run build-bulma -- --watch",
         "build": "npm run build-bulma && hugo",
         "dev": "hugo serve --disableFastRender --noHTTPCache"
     }

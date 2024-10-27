@@ -2,3 +2,5 @@ baseURL: 'https://www.0xgoon.com'
 languageCode: 'en-us'
 title: 'GOON'
 
+build:
+  noJSConfigInAssets: true
