@@ -1,5 +1,5 @@
 {{ define "main" }}
-<nav class="navbar pl-4" role="navigation" aria-label="main navigation">
+<nav class="navbar pl-4 pr-6" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
             <figure class="image logo">
@@ -24,20 +24,21 @@
             <a class="navbar-item" href="#tokenomics">
                 Tokenomics
             </a>
-
+        </div>
+        <div class="navbar-end">
             <a class="navbar-item" href="{{ site.Params.social.twitter }}" target="_blank">
-                <span class="icon" data-clipboard="normal">
-                    <i class="fab fa-x-twitter"></i>
+                <span class="icon is-medium" data-clipboard="normal">
+                    <i class="fab fa-lg fa-x-twitter"></i>
                 </span>
             </a>
             <a class="navbar-item" href="{{ site.Params.social.telegram }}" target="_blank">
-                <span class="icon" data-clipboard="normal">
-                    <i class="fab fa-telegram"></i>
+                <span class="icon is-medium" data-clipboard="normal">
+                    <i class="fab fa-lg fa-telegram"></i>
                 </span>
             </a>
             <a class="navbar-item" href="{{ site.Params.social.discord }}" target="_blank">
-                <span class="icon" data-clipboard="normal">
-                    <i class="fab fa-discord"></i>
+                <span class="icon is-medium" data-clipboard="normal">
+                    <i class="fab fa-lg fa-discord"></i>
                 </span>
             </a>
         </div>
