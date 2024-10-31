@@ -58,27 +58,33 @@
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <a href="{{ site.Params.social.twitter }}" target="_blank">
-                        <span class="icon is-large" data-clipboard="normal">
-                            <i class="fab fa-lg fa-x-twitter"></i>
+                    {{ range site.Params.social }}
+                    <a href="{{ .url }}" target="_blank">
+                        <span class="icon is-large">
+                            <i class="fa-lg {{ .icon }}"></i>
                         </span>
                     </a>
-                    <a href="{{ site.Params.social.telegram }}" target="_blank">
-                        <span class="icon is-large" data-clipboard="normal">
-                            <i class="fab fa-lg fa-telegram"></i>
-                        </span>
-                    </a>
-                    <a href="{{ site.Params.social.discord }}" target="_blank">
-                        <span class="icon is-large" data-clipboard="normal">
-                            <i class="fab fa-lg fa-discord"></i>
-                        </span>
-                    </a>
+                    {{ end }}
                 </div>
             </div>
         </div>
     </nav>
     {{ block "main" . }}
     {{ end }}
+    <footer class="footer" id="join-now">
+        <div class="container">
+            <div class="content has-text-centered">
+                <h2 class="title">JOIN NOW</h2>
+                {{ range site.Params.social }}
+                <a href="{{ .url }}" target="_blank">
+                    <span class="icon is-large">
+                        <i class="fa-2x {{ .icon }}"></i>
+                    </span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

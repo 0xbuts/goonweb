@@ -7,6 +7,12 @@ build:
 
 params:
   social:
-    twitter: https://x.com/0xGOON_morning
-    telegram: https://t.me/GOON_morning
-    discord: https://discord.gg/ESz7yxuk
+    - 
+      url: https://x.com/0xGOON_morning
+      icon: fab fa-x-twitter
+    -
+      url: https://t.me/GOON_morning
+      icon: fab fa-telegram
+    - 
+      url: https://discord.gg/ESz7yxuk
+      icon: fab fa-discord
