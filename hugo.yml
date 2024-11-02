@@ -5,6 +5,10 @@ title: 'GOON'
 build:
   noJSConfigInAssets: true
 
+disableKinds:
+  - taxonomy
+  - term
+
 params:
   social:
     - 
