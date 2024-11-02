@@ -39,7 +39,7 @@ function main() {
 
                 if (normalContent && successContent && errorContent) {
                     normalContent.classList.add(hiddenClass);
-                    
+
                     if (success) {
                         successContent.classList.remove(hiddenClass);
                     } else {
@@ -90,4 +90,19 @@ function main() {
             }
         }
     });
+
+    // stop scroll animations when scrolling
+    const scrolls = document.querySelectorAll(".scroll");
+    scrolls.forEach(scroll => {
+        scroll.totalIterations = 0;
+        scroll.addEventListener('animationiteration', () => {
+            scroll.totalIterations += 1;
+        });
+    });
+    window.addEventListener('scroll', () => {
+        scrolls.forEach(scroll => {
+            scroll.style.animationIterationCount = (scroll.totalIterations + 1).toString();
+        });
+    });
+
 }

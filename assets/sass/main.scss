@@ -114,3 +114,39 @@ body {
     height: auto;
     margin: auto;
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(.75em);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.scroll {
+    display: inline;
+    position: absolute;
+    bottom: 4em;
+    left: 50%;
+    background: #fff;
+    height: 2em;
+    width: .1em;
+    border-radius: 10%;
+    transform-origin: top center;
+    backface-visibility: hidden;
+    animation: scroll 2s ease-out infinite ;
+    animation-fill-mode: forwards;
+}
