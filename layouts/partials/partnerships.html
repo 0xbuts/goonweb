@@ -1,0 +1,50 @@
+<section class="hero is-fullheight-with-navbar">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title pb-6">
+                <div class="has-text-white">BETTER</div>
+                <div class="is-italic">TOGETHER</div>
+            </h1>
+            <h2 class="subtitle">
+                One plus one equals two. GOON plus GOON equals infinity.
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="content">
+            {{ with .Site.GetPage "/partnerships/partners" }}
+            <div class="columns is-multiline is-vcentered is-8">
+                {{ range sort .Pages ".Params.order" "asc" }}
+                <div class="column is-6">
+                    {{ with .Resources.GetMatch "*.png" }}
+                    <figure class="image partner-image">
+                        <img src="{{ .Permalink }}" alt="">
+                    </figure>
+                    {{ end }}
+                </div>
+
+                <div class="column is-6">
+                    <h2 class="title">{{ .Title }}</h2>
+                    <div class="has-text-white is-size-5">{{ .Content }}</div>
+                    <div class="has-text-centered mt-4">
+                        <a href="{{ .Params.url }}" target="_blank">
+                            <button class="button is-primary">
+                                <span class="icon-text">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </span>
+                                    <span>CHECK THEM OUT</span>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                {{ end }}
+
+                {{ end }}
+            </div>
+        </div>
+</section>
