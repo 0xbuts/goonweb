@@ -16,11 +16,15 @@
     <div class="container">
         <div class="content">
             {{ with .Site.GetPage "/character-classes/classes" }}
-            <div class="columns is-multiline">
+            <div class="columns is-multiline is-vcentered is-mobile">
                 {{ range $i, $page := .Pages }}
                 {{ $ta := ""}}
                 {{ if (modBool $i 2) }}
-                <div class="column is-4"></div>
+                <div class="column is-4">
+                    <figure class="image is-256x256">
+                        <img src="{{ .Params.image }}" alt="">
+                    </figure>
+                </div>
                 {{ $ta = "has-text-left" }}
                 {{ else }}
                 {{ $ta = "has-text-right" }}
@@ -35,7 +39,11 @@
                 </div>
 
                 {{ if not (modBool $i 2) }}
-                <div class="column is-4"></div>
+                <div class="column is-4">
+                    <figure class="image is-256x256">
+                        <img src="{{ .Params.image }}" alt="">
+                    </figure>
+                </div>
                 {{ else }}
                 <div class="column is-2"></div>
                 {{ end}}
