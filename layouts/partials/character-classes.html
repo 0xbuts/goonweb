@@ -41,7 +41,7 @@
                 {{ if not (modBool $i 2) }}
                 <div class="column is-4">
                     <figure class="image is-256x256">
-                        <img src="{{ $page.Params.image }}" alt="">
+                        <img class="lazy" data-src="{{ $page.Params.image }}" alt="">
                     </figure>
                 </div>
                 {{ else }}

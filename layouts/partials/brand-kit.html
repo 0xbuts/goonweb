@@ -18,8 +18,8 @@
                 {{ range sort .Pages ".Params.order" "asc" }}
                 <div class="column is-6">
                     {{ with .Resources.GetMatch "*.png" }}
-                    <figure class="image partner-image">
-                        <img src="{{ .RelPermalink }}" alt="">
+                    <figure class="image kit-image">
+                        <img class="lazy" data-src="{{ .RelPermalink }}" alt="">
                     </figure>
                     {{ end }}
                 </div>
