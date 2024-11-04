@@ -10,6 +10,7 @@ disableKinds:
   - term
 
 params:
+  ca: 0x433cDE5a82b5e0658dA3543b47A375dffd126Eb6
   social:
     - 
       url: https://x.com/0xGOON_morning
@@ -20,3 +21,16 @@ params:
     - 
       url: https://discord.gg/ESz7yxuk
       icon: fab fa-discord
+  buy:
+    - 
+      name: Jumper
+      url: https://jumper.exchange/?fromChain=137&toChain=137&toToken={{CA}}
+    - 
+      name: LlamaSwap
+      url: https://swap.defillama.com/?chain=polygon&from=0x0000000000000000000000000000000000000000&tab=swap&to={{CA}}
+    - 
+      name: QuickSwap
+      url: https://quickswap.exchange/#/swap?swapIndex=0&currency0=ETH&currency1={{CA}}
+    - 
+      name: ApeBond
+      url: https://apebond.click/GOON

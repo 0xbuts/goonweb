@@ -1,5 +1,17 @@
 <section class="section" id="how-to-buy">
     <div class="content">
         <h2 class="title">How to buy</h2>
+        <div class="buttons is-centered">
+            {{ range site.Params.buy }}
+            <a href='{{ strings.Replace .url "{{CA}}" site.Params.ca }}' target="_blank">
+                <button class="button is-white is-outlined"> <span class="icon-text">
+                    <span class="icon">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                    <span>{{ .name }}</span>
+                </button>
+            </a>
+            {{ end }}
+        </div>
     </div>
 </section>
