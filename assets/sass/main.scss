@@ -1,5 +1,6 @@
 @import "/css/bulma.css";
 @import "colors";
+@import 'sal.js/dist/sal';
 
 $navbar-breakpoint: 1023px;
 
@@ -11,6 +12,8 @@ body {
 .hero .title {
     font-size: 10vw;
     line-height: 7.5vw;
+    --sal-duration: 1s;
+    --sal-delay: 0.25s;
 }
 
 .content .title {
@@ -86,6 +89,7 @@ body {
     left: 0;
     width: 20%;
     height: auto;
+    --sal-duration: 0.5s;
 }
 
 .hero-right {
@@ -94,6 +98,7 @@ body {
     right: 0;
     width: 15%;
     height: auto;
+    --sal-duration: 0.5s;
 }
 
 .hero-mobile {

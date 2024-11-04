@@ -1,10 +1,14 @@
 import './icons.js';
 import LazyLoad from 'vanilla-lazyload';
+import sal from 'sal.js'
 
 document.addEventListener('DOMContentLoaded', main);
 
 function main() {
     new LazyLoad();
+    
+    sal();
+
     // anchors smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

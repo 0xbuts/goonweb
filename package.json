@@ -5,6 +5,7 @@
         "@fortawesome/free-regular-svg-icons": "^6.6.0",
         "@fortawesome/free-solid-svg-icons": "^6.6.0",
         "bulma": "^1.0.2",
+        "sal.js": "^0.8.5",
         "sass": "^1.80.4",
         "vanilla-lazyload": "^19.1.3"
     },
