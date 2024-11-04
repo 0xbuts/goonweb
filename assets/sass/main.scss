@@ -7,6 +7,7 @@ $navbar-breakpoint: 1023px;
 body {
     background-color: $purple-light;
     background-image: linear-gradient(315deg, $purple-light 8%, $peachy-pink 85%);
+    --sal-duration: 0.5s;
 }
 
 .hero .title {
@@ -89,7 +90,7 @@ body {
     left: 0;
     width: 20%;
     height: auto;
-    --sal-duration: 0.5s;
+    --sal-duration: 1s;
 }
 
 .hero-right {
@@ -98,7 +99,7 @@ body {
     right: 0;
     width: 15%;
     height: auto;
-    --sal-duration: 0.5s;
+    --sal-duration: 1s;
 }
 
 .hero-mobile {

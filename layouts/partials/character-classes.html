@@ -19,27 +19,30 @@
             <div class="columns is-multiline is-vcentered is-mobile">
                 {{ range $i, $page := .Pages }}
                 {{ $ta := ""}}
+                {{ $textAnim := ""}}
                 {{ if (modBool $i 2) }}
-                <div class="column is-4">
+                <div class="column is-4" data-sal="slide-right">
                     <figure class="image is-256x256">
                         <img src="{{ $page.Params.image }}" alt="">
                     </figure>
                 </div>
+                {{ $textAnim = "slide-left"}}
                 {{ $ta = "has-text-left" }}
                 {{ else }}
                 {{ $ta = "has-text-right" }}
+                {{ $textAnim = "slide-right"}}
                 <div class="column is-2"></div>
                 {{ end }}
 
                 <div class="column is-6">
                     <div class="{{ $ta }}">
-                        <h2 class="title {{ $ta }}">{{ $page.Title }}</h2>
-                        <div class="{{ $ta }} has-text-white is-size-5">{{ $page.Content }}</div>
+                        <h2 class="title {{ $ta }}" data-sal="{{ $textAnim }}">{{ $page.Title }}</h2>
+                        <div class="{{ $ta }} has-text-white is-size-5" data-sal="{{ $textAnim }}" data-sal-delay="250">{{ $page.Content }}</div>
                     </div>
                 </div>
 
                 {{ if not (modBool $i 2) }}
-                <div class="column is-4">
+                <div class="column is-4" data-sal="slide-left">
                     <figure class="image is-256x256">
                         <img class="lazy" data-src="{{ $page.Params.image }}" alt="">
                     </figure>

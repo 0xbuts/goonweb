@@ -18,16 +18,16 @@
                 {{ range sort .Pages ".Params.order" "asc" }}
                 <div class="column is-6">
                     {{ with .Resources.GetMatch "*.png" }}
-                    <figure class="image kit-image">
+                    <figure class="image kit-image" data-sal="slide-right">
                         <img class="lazy" data-src="{{ .RelPermalink }}" alt="">
                     </figure>
                     {{ end }}
                 </div>
 
                 <div class="column is-6">
-                    <h2 class="title">{{ .Title }}</h2>
+                    <h2 class="title" data-sal="slide-left">{{ .Title }}</h2>
                     <div class="has-text-white is-size-5">{{ .Content }}</div>
-                    <div class="has-text-centered mt-4">
+                    <div class="has-text-centered mt-4" data-sal="slide-up" data-sal-delay="500">
                         <a href="{{ .Params.url }}" target="_blank">
                             <button class="button is-white is-outlined">
                                 <span class="icon-text">
