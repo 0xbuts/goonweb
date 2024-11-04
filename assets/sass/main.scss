@@ -147,6 +147,10 @@ body {
     border-radius: 10%;
     transform-origin: top center;
     backface-visibility: hidden;
-    animation: scroll 2s ease-out infinite ;
+    animation: scroll 2s ease-out infinite;
     animation-fill-mode: forwards;
+}
+
+.button {
+    border-radius: 0;
 }
