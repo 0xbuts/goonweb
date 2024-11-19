@@ -1,14 +1,65 @@
 <section class="section" id="how-to-buy">
     <div class="content">
         <h2 class="title">How to buy</h2>
-        <div class="buttons is-centered">
+        <div class="content  pt-6">
+            <div class="columns is-multiline is-vcentered">
+                <div class="column is-4 is-offset-2">
+                    <div class="box">
+                        <h3>1. Install Rabby Wallet</h3>
+                        <div>Download and install the Rabby Wallet.</div>
+                        <a href="https://rabby.io" target="_blank">
+                            <div class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </span>
+                                <span>
+                                    Rabby Wallet Official Site
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box">
+                        <h3>2. Add $POL to wallet</h3>
+                        <div>Buy $POL on a central exchange and transfer it on the Polygon chain to your Rabby Wallet.
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2">
+                </div>
+                <div class="column is-4 is-offset-2">
+                    <div class="box">
+                        <h3>3. Swap $POL for $GOON</h3>
+                        <div>Swap $POL for $GOON using Rabby or by visiting Quickswap. See below for other buy options.
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box">
+                        <h3>4. You are now a $GOON holder</h3>
+                        {{ $telegram := index (where site.Params.social "id" "telegram") 0 }}
+                        {{ $twitter := index (where site.Params.social "id" "twitter") 0 }}
+                        {{ $discord := index (where site.Params.social "id" "discord") 0 }}
+                        <div>Congratulations you are now a Goon. Join the <a href="{{ $telegram.url }}"
+                                target="_blank">Telegram</a>, join the <a href="{{ $discord.url }}"
+                                target="_blank">Discord</a>, <a href="{{ $twitter.url }}" target="_blank">follow on
+                                X</a>
+                            and let everyone know!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons is-centered pt-6">
             {{ range site.Params.buy }}
             <a href='{{ strings.Replace .url "{{CA}}" site.Params.ca }}' target="_blank">
                 <button class="button is-white is-outlined"> <span class="icon-text">
-                    <span class="icon">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </span>
-                    <span>{{ .name }}</span>
+                        <span class="icon">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                        <span>{{ .name }}</span>
                 </button>
             </a>
             {{ end }}

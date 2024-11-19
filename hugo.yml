@@ -15,12 +15,15 @@ params:
     - 
       url: https://x.com/0xGOON_morning
       icon: fab fa-x-twitter
+      id: twitter
     -
       url: https://t.me/GOON_morning
       icon: fab fa-telegram
+      id: telegram
     - 
       url: https://discord.gg/ESz7yxuk
       icon: fab fa-discord
+      id: discord
   buy:
     - 
       name: QuickSwap
