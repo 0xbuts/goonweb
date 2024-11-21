@@ -1,5 +1,18 @@
 <section class="section" id="about">
+    {{ with .Site.GetPage "/about"}}
+    <div class="container">
     <div class="content">
-        <h2 class="title">About</h2>
+        <h2 class="title">{{ .Title }}</h2>
+        <div class="has-text-white has-text-centered is-size-5">{{ .Content }}</div>
+        <div class="columns is-centered pt-6">
+            <div class="column is-3">
+                {{ partial "image-tweet.html" (dict "user" "sandeepnailwal" "id" "1784184357433053695")}}
+            </div>
+            <div class="column is-3">
+                {{ partial "image-tweet.html" (dict "user" "sandeepnailwal" "id" "1784367772627317159")}}
+            </a>
+            </div>
+        </div>
     </div>
+    {{ end }}
 </section>
