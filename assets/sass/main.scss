@@ -44,7 +44,7 @@ body {
 
 .navbar-item {
     font-weight: 800;
-    font-size: 20px;
+    font-size: 18px;
     color: $purple-dark;
     padding: 0.5rem 0.7rem;
 }
@@ -59,7 +59,7 @@ body {
 
 @media (max-width: 1440px) {
     .navbar-item {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -70,6 +70,11 @@ body {
 
     .navbar-item {
         font-size: 13px;
+    }
+
+    .navbar-end .icon {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -114,7 +119,8 @@ body {
     line-height: 4.5vw;
 }
 
-.partner-image, .kit-image {
+.partner-image,
+.kit-image {
     background-color: rgba(255, 255, 255, 0.15);
     width: 75%;
     height: auto;
@@ -168,4 +174,26 @@ body {
 
 .box a {
     color: white;
+}
+
+@keyframes highlight {
+    0% {
+        background-position: 0 100px;
+    }
+
+    100% {
+        background-position: 100px 0;
+    }
+}
+
+.highlight {
+    background: -webkit-linear-gradient(left, $purple-light, $purple-dark, $purple-light);
+    background-size: 100px 100px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-duration: 2s;
+    animation-name: highlight;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
