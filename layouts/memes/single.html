@@ -1,3 +1,9 @@
+{{ define "head" }}
+{{ with resources.Get "js/goon.js" | js.Build | minify | fingerprint  }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ end }}
+{{ end }}
+
 {{ define "main" }}
 {{ partial "memes.html" . }}
 {{ end }}

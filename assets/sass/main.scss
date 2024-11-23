@@ -197,3 +197,26 @@ body {
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
+
+.masonry {
+    width: 100%;
+    display: flex;
+}
+
+.masonry-item {
+    width: 25%;
+    margin: 0;
+    padding: 0;
+}
+
+.masonry-item img,
+video {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .masonry-item {
+        width: 50%;
+    }
+}
