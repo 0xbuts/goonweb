@@ -1,5 +1,17 @@
 <section class="section" id="tokenomics">
-    <div class="content">
-        <h2 class="title">Tokenomics</h2>
+    {{ with .Site.GetPage "/tokenomics"}}
+    <div class="container">
+        <div class="content">
+            <h2 class="title">{{ .Title }}</h2>
+            <figure class="image">
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <img src="/images/tokenomics.png" alt="">
+                    </div>
+                </div>
+            </figure>
+            <div class="has-text-white has-text-centered is-size-5">{{ .Content }}</div>
+        </div>
     </div>
+    {{ end }}
 </section>
