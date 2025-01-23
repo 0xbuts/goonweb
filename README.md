@@ -1,6 +1,6 @@
 # Goon Website
 
-[$GOON](https://polygonscan.com/token/0x433cde5a82b5e0658da3543b47a375dffd126eb6) Website. Currently in development.
+[$GOON](https://polygonscan.com/token/0x433cde5a82b5e0658da3543b47a375dffd126eb6) Website.
 
 ## Intro
 
